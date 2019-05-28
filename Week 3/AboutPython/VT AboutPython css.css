@@ -1,0 +1,197 @@
+#wrapper {
+    width: 970px;
+    margin: auto;
+    background-color: rgb(38, 81, 117);
+    background: linear-gradient(rgb(38, 81, 117), rgb(54, 116, 168));
+    font-family: arial;
+}
+
+#header {
+    height: 130px;
+    display: block;
+    padding: 10px;
+
+}
+
+    .logo {
+        height: 120px;
+        display: inline-block;
+    }
+
+    .search {
+        width: 300px;
+        height: 100px;
+        margin: 0px 0px 0px 200px;
+        vertical-align: top;
+        display: inline-block;
+        padding: 10px;
+    }
+
+        .TextSize {
+            color: white;
+            display: inline-block;
+            margin: 0px 50px;
+        }
+
+            .TextSize p{
+                display: inline-block;
+                margin: 0;
+            }
+
+            .TextSize a:link {
+                color: rgb(255,211,67);
+                display: inline-block;
+                margin: 0px 4px;
+            }
+
+        .SearchForm {
+            display: inline-block;
+            width: 270px;
+            height:60px;
+            margin: 10px;
+        }
+
+        .SearchBar {
+            width: 210px;
+            height:20px;
+            background-color: rgb(68,68,68);
+            border-radius: 5px;
+            box-shadow: 5px 5px 5px;
+            padding: 20px 30px;
+        }
+
+#TopContent {
+    width: 870px;
+    height: 420px;
+    margin: 0px 50px 0px 50px;
+}
+
+    .NavBar {
+        background: linear-gradient(rgb(57, 119, 171),rgb(74, 127, 171),rgb(57, 119, 171));
+        width: 870px;
+        height: 48px;
+        margin: 0px auto;
+        border-radius: 5px;
+        box-shadow: 3px 3px 3px;
+    }
+
+        .NavLink {
+            color: white;
+            font-size: 18pt;
+            height: 32px;
+            display: inline-block;
+            text-align: center;
+            text-decoration: none;
+            margin: 10px 20px;
+        }
+
+    .SideBar {
+        width: 200px;
+        height: 270px;
+        display: inline-block;
+        vertical-align: top;
+        padding: 10px;
+        text-align: center;
+    }
+        .SideBar ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .SideBar li {
+            padding-left: 1px;
+            text-indent: -1px;
+        }
+
+        .SideBar li::before {
+            color: rgb(255,211,67);
+            content: ">>";
+            padding-right: 5px;
+        }
+
+
+        .SideLink {
+            color: white;
+            font-size: 14pt;
+            height: 20px;
+            display: inline-block;
+            text-align: center;
+            margin: 10px;
+        }
+
+    .Content {
+        width: 600px;
+        height: 360px;
+        display: inline-block;
+    }
+        .Content p {
+            text-align: center;
+            color: white;
+        }
+        .Content h3 {
+            text-align: center;
+            font-style: oblique;
+            font-family: arial;
+            color: rgb(255,211,67);
+        }
+        .Content h4 {
+            color: white;
+            text-align: center;
+        }
+
+#CenterContent {
+    background-color: white;
+    height: 260px;
+    padding: 10px 0px 10px 70px;
+    border-top: 2px solid rgb(26, 56, 82);
+}
+
+    .BoxContent {
+        width: 400px;
+        height: 250px;
+        display: inline-block;
+        border-top: 6px solid rgb(117, 168, 211);
+        vertical-align: top;
+        margin-right: 20px;
+    }
+
+    .BoxContent h3 {
+        text-align: center;
+        margin: 5px;
+    }
+
+    .BoxContent p {
+        text-align: center;
+    }
+
+    .BoxContent ul {
+        list-style-type: square;
+    }
+    .BoxContent li {
+        margin: 4px;
+        text-align: center;
+    }
+    .BoxContent a:link {
+        color: rgb(170, 201, 228);
+    }
+
+#Footer {
+    height: 80px;
+    display: block;
+}
+
+.FooterLink {
+    color: rgb(170, 201, 228);
+    font-size: 14pt;
+    height: 20px;
+    display: inline-block;
+    text-align: center;
+    margin: 10px 0px 10px 100px;
+}
+
+    #Footer p {
+        text-align: center;
+        color: rgb(170, 201, 228);
+        margin: 0 auto;
+    }
