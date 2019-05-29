@@ -1,0 +1,143 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    
+}
+#wall { 
+    width: 970px;
+    margin: auto;
+    padding: 10px, 10px, 10px, 15px;
+    background: radial-gradient(#6f5964, #1f0f13);
+}
+#header {
+    width: auto;
+    height: 50px;
+    background-color:#F5F5F5;
+
+}
+    #header h1 {
+        display: inline-block;
+        text-align: left;
+        font-family: "Comic Sans MS";
+        margin: 5px;
+
+    }
+    #header h3 {
+        display: inline-block;
+        font-family: "Arial", "Helvetica", sans-serif;
+        margin: 0px 5px 0px 400px;   
+    }
+#JayneImg{
+        border: 5px solid grey;
+        border-radius: 4px;
+        width: 420px;
+        vertical-align: top;
+        margin: 10px;
+}
+
+
+    #AboutContent {
+        background: linear-gradient(to right, rgba(190, 189, 192, 0.993),rgb(183, 170, 201));
+        display: inline-block;
+        width: 480px;
+        vertical-align: top;
+        margin: 10px 10px 10px 10px;
+        font-size: 14pt;
+        padding-bottom: 10px;
+
+    }
+    #AboutContent p {
+        margin: 10px;
+        text-align: justify;
+        display: inline-block;
+        font-family: "Arial", "Helvetica", sans-serif;    
+        font-size: 13pt;
+
+    } 
+    #AboutContent a{
+        color: #1f0f13;
+        margin-left: 5px;
+        
+   }
+
+    .title {
+        background: linear-gradient(lightgray,gray,lightgray);
+        color: white;
+        margin: 0px 0px 10px 0px;
+        padding: 5px;
+    }
+    
+    .boxs {
+        display: inline-block;
+        width: 310px;
+        height: 670px;
+        background: linear-gradient(to right, rgba(190, 189, 192, 0.993),rgb(183, 170, 201));
+        vertical-align: top;
+        margin: 10px 5px;
+    }
+    
+    .boxs p {
+        margin: 10px 5px 10px 5px;
+        text-align: justify;
+        font-size: 13pt;
+    }
+    
+    .MyPic {
+        width: 310px;
+    }
+    
+    .Link {
+        display: block;
+        background-color: darkgreen;
+        border-color: rgb(1, 66, 1);
+        border-radius: 6px;
+        box-shadow: 4px 4px 4px grey;
+        color: white;
+        margin: 0px auto;
+        width: 120px;
+        padding: 4px;
+        text-decoration: none;
+        text-align: center;
+    }
+    
+    .tech_icons {
+        width: 48px;
+        height: 48px;
+        display: inline-block;
+        margin: 5px;
+    }
+    
+    .NetImg {
+        width: 24px;
+        height: 24px;
+        display: inline-block;
+        position: relative;
+        top: 6px;
+    }
+    
+    .mainLink {
+        font-size: 13pt;
+        color: darkblue;
+        text-decoration: none;
+    }
+    
+    a.NetLink {
+        font-size: 13pt;
+        margin: 0px 4px 0px 4px;
+    }
+    a.NetLink:link{
+        color: darkblue;
+    }
+    
+    #footer {
+        width: auto;
+        height: 60px;
+        background-color:#F5F5F5;
+        margin: 10px 0px 0px 0px;
+        text-align: center;
+        font-family: "Arial", "Helvetica", sans-serif;
+    }
+
+ 
+
+
