@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <title>Please Register</title>
+</head>
+<body>
+        <fieldset>
+                <legend><h1>My Register Form</h1></legend>
+    <form action= "process.php" method="post">
+
+<p><label for= "first_name"> First Name:</label></p>
+<input type= "text" id= "first_name" name="first_name">
+
+<p><label for= "last_name"> Last Name:</label></p>
+<input type= "text" id= "last_name" name="last_name">
+
+<p><label for= "email">Email:</label></p>
+<input type="text" id="email" name="email">
+
+<p><label for= "Date"> Date:</label></p>
+<input type= "text" id= "Date" name="Date">
+
+
+<p>Select your gender:</p>
+<select name="gender">
+    <option value="male">Male</option>
+    <option value="female">Female</option>
+    <option value="decline">Prefer not to say</option>
+</select>
+
+<p>Say a few words about yourself:</p>
+<textarea name="description"></textarea>
+
+<p><label for="password">Password:</label></p>
+<input type="password" id="password" name="password">
+<p><lable for="pw_confirm">Password Confirmation:</lable></p>
+<input type="password" id="pw_confirm" name="password_confirmation">
+
+<p><input type="submit" value="Click here to register"></p>
+</fieldset>
+</form>
+</body>
+</html>
+
