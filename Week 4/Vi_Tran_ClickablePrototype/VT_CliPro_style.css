@@ -1,0 +1,17 @@
+.text-center{
+    height: 100%;
+    text-align: center!important;
+
+}
+.navbar{
+    background: linear-gradient(black,gray)
+}
+.collapse{
+    justify-content: center;
+    
+
+}
+.jumbotron{
+    background-color: transparent;
+    
+}
