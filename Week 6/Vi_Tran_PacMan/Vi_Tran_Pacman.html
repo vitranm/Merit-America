@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Pacman Game</title>
+        <style type="text/css">
+        body{
+            background-image: url(marble-gold.jpg);
+            margin: 0px;
+            padding: 0px;
+        }
+        div#pacman{
+            background: url('pacman1.gif');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            width: 20px;
+            height: 20px;
+            position: absolute;
+        }
+        .row{
+            line-height: 0px;
+        }
+        div.row div{
+            width: 20px;
+            height: 20px;
+            border: 1px;
+            display: inline-block;
+        }
+        div.brick{
+            background-color: lightpink;
+        }
+        div.coin{
+            background: url('coin1.gif');
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        div#score{
+            border: 5px solid palegreen;
+            width: 50px;
+            height: 50px;
+            color: black;
+            padding: 7px;
+            text-align: center;
+            position: absolute;
+            top: 0px;
+            left: 420px;
+        }
+        div.cherry{
+			background: url('cherry1.png');
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: cover;
+		}
+
+        </style>
+    </head>
+    <body>
+        <div id='contaner'>
+
+        <div id='world'></div>
+        <div id='pacman'></div>
+        <div id='score'>100</div>
+
+        </div>
+ 
+</body>
+<script>
+    var world = [
+        [2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2],
+        [2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2],
+        [2,1,2,1,2,2,2,2,2,1,3,2,2,2,2,2,1,2,1,2],
+        [2,1,2,3,1,1,1,1,1,2,2,1,1,1,1,1,1,2,1,2],
+        [2,1,2,2,2,2,1,1,1,1,1,1,1,1,2,2,2,2,1,2],
+        [2,1,1,1,1,1,1,2,2,1,1,2,2,1,1,1,1,1,1,2],
+        [2,1,2,2,1,1,2,1,1,1,1,1,1,2,1,1,2,1,1,2],
+        [2,1,1,2,1,2,1,1,2,2,2,2,1,1,2,1,2,1,1,2],
+        [2,1,3,2,1,2,3,1,2,1,1,2,1,1,2,1,2,2,1,2],
+        [2,1,1,2,1,1,2,1,1,1,1,1,1,2,1,1,3,2,1,2],
+        [2,1,2,2,1,1,1,2,1,1,1,1,2,1,1,2,2,2,1,2],
+        [2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,3,1,1,2],
+        [2,1,2,2,2,2,2,1,2,1,1,2,1,2,2,2,2,2,1,2],
+        [2,1,2,1,1,1,2,1,2,0,1,2,1,2,1,1,1,2,1,2],
+        [2,1,2,1,2,1,2,1,2,2,2,2,1,2,1,2,1,2,1,2],
+        [2,1,1,1,2,1,1,1,1,1,1,1,1,1,1,2,1,1,1,2],
+        [2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2],
+    ]
+
+    var pacman = {
+        x: 9,
+        y: 13
+    }
+    var score = 0;
+    function displayWorld(){
+        var output = '';
+        
+        for(var i=0;i<world.length; i++){
+            output += "<div class='row'>";
+            for(var j=0; j<world[i].length; j++){
+                if(world[i][j] == 2)
+                output += "<div class='brick'></div>";
+                else if(world[i][j] == 1)
+                output += "<div class='coin'></div>";
+                if(world[i][j] == 0)
+                output += "<div class='empty'></div>";
+                else if(world[i][j] == 3)
+					output += "<div class='cherry'></div>";
+                
+            }
+            output += "</div>";
+
+        }
+        console.log(output);
+        document.getElementById('world').innerHTML = output;
+    }
+    displayWorld();
+    displayPacman();
+
+
+    function displayPacman(){
+        document.getElementById('pacman').style.top = pacman.y*20+"px";
+        document.getElementById('pacman').style.left = pacman.x*20+"px";
+    }
+    function displayScore(){
+        document.getElementById('score').innerHTML = score;
+    }
+    displayPacman();
+    displayScore();
+
+    document.onkeydown = function(e){
+       if(e.keyCode == 37 && world[pacman.y][pacman.x-1] !=2){         //left
+           pacman.x --;
+       }
+       else if(e.keyCode == 39 && world[pacman.y][pacman.x+1] !=2){    //right
+           pacman.x ++;
+       }
+       if(e.keyCode == 40 && world[pacman.y+1][pacman.x] !=2){        //down
+           pacman.y ++;
+       }
+       if(e.keyCode == 38 && world[pacman.y-1][pacman.x] !=2){       //top
+           pacman.y --;
+       }
+       if (world[pacman.y][pacman.x] == 1){
+           score+=10;
+           world[pacman.y][pacman.x] = 0;
+       }
+       if(world[pacman.y][pacman.x] == 3){
+           score+=15;
+           world[pacman.y][pacman.x] = 0;
+       }
+       displayWorld();
+       displayScore();
+
+       console.log(e.keyCode);
+
+       displayPacman();
+       displayScore();
+       
+
+
+
+    }
+
+</script>
+
+</html>
