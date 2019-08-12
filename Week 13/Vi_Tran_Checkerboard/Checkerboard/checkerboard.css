@@ -1,0 +1,16 @@
+@charset "UTF-8";
+
+       .container{
+           display: block
+       }
+       .box{
+           width: 30px;
+           height: 30px;
+           display: inline-block;
+       }
+       .green{
+           background: green;
+       }
+       .pink{
+           background:pink;
+       }
